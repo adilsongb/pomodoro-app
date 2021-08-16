@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/967089a46f.js" crossorigin="anonymous"></script>
   <script src="script.js"></script>
+  <script async src="pomodoroApp.js"></script>
   <style>
     header {
       display: flex;
@@ -46,17 +47,11 @@
         <div class="circleSession"></div>
         <div class="circleSession"></div>
       </div>
-      <button id="playOrPause" onclick="timer()">
+      <button id="playOrPause" onclick="firstAnimationBar()">
         <i class="fas fa-play"></i>
       </button>
     </div>
   </main>
-
-  <script>
-    document.body.style.height = `${window.innerHeight}px`;
-    document.querySelector('main').style.height = `${window.innerHeight - 200}px`;
-    configTimer();
-  </script>
 
 </body>
 </html>

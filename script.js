@@ -1,4 +1,4 @@
-let timeWork = 25;
+let timeWork = 20;
 let timePause = 5;
 let sessions = 3;
 let seconds = 60;
@@ -60,37 +60,3 @@ const subNumberTime = (inputs) => {
 
   })
 };
-
-const configTimer = () => {
-  const minutes = document.querySelector('#min');
-  const secs = document.querySelector('#sec');
-
-  minutes.innerHTML = timeWork;
-  secs.innerHTML = '00';
-}
-
-const timer = () => {
-  const minutes = document.querySelector('#min');
-  const secs = document.querySelector('#sec');
-
-  const timerPlay = setInterval(() => {
-    seconds -= 1;
-
-    if (seconds === 59) {
-      timeWork -= 1;
-      minutes.innerHTML = timeWork;
-    }
-
-    if (seconds === 0) {
-      seconds = 60;
-    }
-
-    if (seconds < 10) {
-      secs.innerHTML = `0${seconds}`;
-    } else {
-      secs.innerHTML = seconds;
-    }
-
-  }, 1000);
-
-}
