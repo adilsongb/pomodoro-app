@@ -1,4 +1,4 @@
-let timeWork = 20;
+let timeWork = 1;
 let timePause = 5;
 let sessions = 3;
 let seconds = 60;
