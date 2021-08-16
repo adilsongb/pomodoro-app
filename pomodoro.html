@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/967089a46f.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <style>
+    header {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    main {
+      width: 60%;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Pomodoro</h1>
+    <button id="buttonHome">Início</button>
+  </header>
+
+  <main>
+    <div id="circle">
+      <svg>
+        <circle cx="200" cy="200" r="220"></circle>
+        <circle id="barProgress" cx="200" cy="200" r="220"></circle>
+      </svg>
+      <h2>
+        <span id="min">0</span>:<span id="sec">00</span>
+      </h2>
+    </div>
+
+    <div id="control">
+      <h2 id="status"><span class="work">Trabalho</span></h2>
+      <div id="sessionsCircles">
+        <div class="circleSession"></div>
+        <div class="circleSession"></div>
+        <div class="circleSession"></div>
+      </div>
+      <button id="playOrPause" onclick="timer()">
+        <i class="fas fa-play"></i>
+      </button>
+    </div>
+  </main>
+
+  <script>
+    document.body.style.height = `${window.innerHeight}px`;
+    document.querySelector('main').style.height = `${window.innerHeight - 200}px`;
+    configTimer();
+  </script>
+
+</body>
+</html>

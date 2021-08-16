@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/967089a46f.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Pomodoro</h1>
+  </header>
+  
+  <main>
+
+    <div id="timerConfig">
+      <div class="timerInput">
+        <input type="text" id="timerInput-work" value="25">
+        <div class="details">
+          <button class="sub"><i class="fas fa-minus"></i></button>
+          <span>Trabalho</span>
+          <button class="add"><i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+
+      <div class="timerInput">
+        <input type="text" id="timerInput-pause" value="5">
+        <div class="details">
+          <button class="sub"><i class="fas fa-minus"></i></button>
+          <span>Pausa</span>
+          <button class="add"><i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+
+      <div class="timerInput">
+        <input type="text" id="timerInput-session" value="3">
+        <div class="details">
+          <button class="sub"><i class="fas fa-minus"></i></button>
+          <span>Sessões</span>
+          <button class="add"><i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <button id="continueButton">Continuar</button>
+
+  </main>
+  
+  <script>
+    document.body.style.height = `${window.innerHeight}px`;
+    
+    document.querySelector('main').style.height = `${window.innerHeight - 200}px`;
+
+    addNumberTime(document.querySelectorAll('input'));
+    subNumberTime(document.querySelectorAll('input'))
+  </script>
+
+</body>
+</html>
